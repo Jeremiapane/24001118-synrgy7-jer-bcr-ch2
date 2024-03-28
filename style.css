@@ -13,7 +13,7 @@
 
   --alert-danger: #fa2c5a;
   --alert-warning: #f9cc00;
-  --alert-danger: #73ca5c;
+  --alert-success: #73ca5c;
 
   --neutral-05: #151515;
   --neutral-04: #3c3c3c;
@@ -39,6 +39,15 @@ footer {
   margin: 0;
   padding: 0 8.5rem;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 !important;
+}
 
 ul,
 li,
@@ -46,6 +55,12 @@ a {
   text-decoration: none;
   text-transform: none;
   color: var(--neutral-05);
+}
+.btn-success {
+  background-color: var(--primary-limegreen04) !important;
+  padding: 8px 12px !important;
+  color: var(--neutral-01);
+  width: fit-content;
 }
 .body-light-14 {
   font-size: 14px;
@@ -56,7 +71,7 @@ a {
 }
 .body-regular-14 {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 20px;
   text-align: left;
   color: var(--neutral-05);
@@ -69,8 +84,8 @@ a {
   color: var(--neutral-01);
 }
 .title-bold-16 {
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 20px;
   text-align: left;
   color: var(--neutral-05);
@@ -98,7 +113,31 @@ a {
   .container-lg {
     padding: calc(var(--bs-gutter-x) * 0.5) !important;
   }
-
+  .service-wrapper {
+    flex-wrap: wrap;
+  }
+  .service-wrapper .image-content img {
+    width: 252px !important;
+    height: 228px !important;
+  }
+  #why-us .container h2,
+  #why-us .container p {
+    text-align: center;
+  }
+  .usp-wrapper {
+    gap: 16px;
+  }
+  #why-us .container .card-body p {
+    text-align: left;
+  }
+  #faq .container {
+    gap: 24px;
+  }
+  footer .container {
+    display: grid !important;
+    width: 100vw;
+    gap: 16px;
+  }
   section,
   footer {
     margin-bottom: 60px;
@@ -126,12 +165,20 @@ a {
   padding-top: 97px;
 }
 
+.hero-desc {
+  width: 468px;
+  height: 60px;
+}
+
 .container-fluid {
   width: 100%;
 }
 
 .desc-wrapper {
   padding-left: 136px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .hero-img {
@@ -152,10 +199,16 @@ a {
   width: 468px;
   height: 356px;
 }
+.service-desc {
+  width: 468px;
+  height: 60px;
+  text-align: left;
+  margin-top: 16px;
+}
 
 .service-item img {
   width: 24px;
-  background-color: #cfd4ed;
+  background-color: var(--primary-darkblue01);
   padding: 4px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -164,14 +217,52 @@ a {
   -o-border-radius: 50%;
 }
 
-/* Testimonial */
-.carousel-wrapper {
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  gap: 32px;
+/* why-us */
+#why-us .container {
+  display: grid;
+  gap: 16px;
 }
 
+.usp-wrapper {
+  margin-top: 24px;
+}
+.card-body img {
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.card .card-body {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.usp1 {
+  background-color: var(--alert-warning);
+}
+.usp2 {
+  background-color: var(--alert-danger);
+}
+.usp3 {
+  background-color: var(--primary-darkblue04);
+}
+.usp4 {
+  background-color: var(--alert-success);
+}
+
+/* Testimonial */
+#testimonial .container {
+  display: grid;
+  gap: 16px;
+}
+.carousel-wrapper {
+  margin-top: 24px;
+}
 .testimonial-card {
   background-color: #f1f3ff;
   min-width: 619px;
@@ -201,13 +292,34 @@ a {
   width: 415px;
   height: 132px;
 }
+
+.owl-carousel .owl-item img {
+  display: inline;
+  width: inherit;
+}
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+  width: 32px;
+  height: 32px;
+  color: var(--neutral-05);
+  border: 1px solid var(--neutral-03);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
+  background-color: var(--primary-limegreen04);
+}
 /* CTA */
 .cta-banner {
   margin-bottom: 100px;
 }
 .cta-card {
   background-color: var(--primary-darkblue04);
-  width: 1168px;
+  width: 100%;
   height: 326px;
   border-radius: 13px;
   -webkit-border-radius: 13px;
@@ -232,6 +344,15 @@ a {
 }
 
 /* faq */
+.accordion-item {
+  margin-bottom: 16px;
+  border: 1px solid var(--neutral-03) !important;
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+}
 
 /* Footer */
 .social-media-wrapper img {
