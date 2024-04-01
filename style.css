@@ -114,24 +114,74 @@ a {
     padding: calc(var(--bs-gutter-x) * 0.5) !important;
   }
   .service-wrapper {
-    flex-wrap: wrap;
+    display: block !important;
   }
+
   .service-wrapper .image-content img {
-    width: 252px !important;
-    height: 228px !important;
+    width: 252px;
+    height: 228px;
   }
+
+  .service-wrapper .text-content {
+    padding: 16px;
+    width: 328px !important;
+    height: 388px !important;
+    display: grid;
+  }
+
+  .service-wrapper .text-content p {
+    width: 100%;
+    height: auto;
+  }
+  .list-service {
+    margin-top: 16px !important;
+  }
+
   #why-us .container h2,
   #why-us .container p {
     text-align: center;
   }
+
   .usp-wrapper {
     gap: 16px;
   }
   #why-us .container .card-body p {
     text-align: left;
   }
+
   #faq .container {
     gap: 24px;
+  }
+
+  .testimonial-card,
+  .item {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    height: auto !important;
+    min-width: 328px !important;
+    padding: 40px 32px !important;
+    gap: 24px !important;
+  }
+  .testimonial-details {
+    width: 264px !important;
+    height: auto !important;
+  }
+
+  .cta-banner .container .cta-card {
+    padding: 64px 58px !important;
+    gap: 16px !important;
+  }
+  .cta-banner .container .cta-card h1,
+  .cta-banner .container .cta-card p {
+    width: 212px !important;
+    height: auto !important;
+  }
+  .cta-banner .heading-bold-36 {
+    font-size: 24px !important;
+    line-height: 36px !important;
+  }
+  .cta-card button {
+    margin-top: 16px !important;
   }
   footer .container {
     display: grid !important;
@@ -187,6 +237,9 @@ a {
 
 /* Service */
 .service-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 100px;
 }
 .list-service {
@@ -199,6 +252,7 @@ a {
   width: 468px;
   height: 356px;
 }
+
 .service-desc {
   width: 468px;
   height: 60px;
